@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="Defaultview" fitHeight="75.0" fitWidth="93" layoutX="70.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/default.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="selectedPicture" layoutX="26.0" layoutY="155.0" text="Label" />
+            <ChoiceBox fx:id="imagePicker" layoutX="26.0" layoutY="222.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #274472;">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Default" />
+                     <String fx:value="Male" />
+                     <String fx:value="Female" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.5" minWidth="4.5" prefWidth="43.5" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.5" minWidth="10.0" prefWidth="82.5" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.5" minWidth="10.0" prefWidth="141.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="10.0" prefWidth="34.5" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Username: " textAlignment="CENTER" textFill="#274472" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="usernameTextfield" style="-fx-background-color: white; -fx-border-color: #274472;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Hostname: " textAlignment="CENTER" textFill="#274472" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Port: " textFill="#274472" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="hostnameTextfield" prefWidth="188.0" style="-fx-border-color: #274472;" text="localhost" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="portTextfield" prefHeight="13.0" prefWidth="149.0" style="-fx-border-color: #274472;" text="9001" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button id="connectBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#loginButtonAction" style="-fx-background-color: #274472;" stylesheets="@../styles/Login.css" text="Connect" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <Pane prefHeight="38.0" prefWidth="546.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <Pane prefHeight="35.0" prefWidth="546.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="MinimizedBtn" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="439.0" layoutY="9.0" maxHeight="24.0" maxWidth="68.0" minWidth="45.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="24.0" prefWidth="45.0" stylesheets="@../styles/Login.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="CloseBtn" fx:id="closeButton" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="485.0" layoutY="9.0" maxHeight="24.0" maxWidth="68.0" minWidth="45.0" mnemonicParsing="false" onAction="#closeSystem" prefHeight="24.0" prefWidth="45.0" stylesheets="@../styles/Login.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>

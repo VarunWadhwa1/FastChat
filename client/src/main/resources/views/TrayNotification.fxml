@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="111.0" prefWidth="461.0" style="-fx-border-color: gray; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle fx:id="rectangleColor" arcHeight="5.0" arcWidth="5.0" fill="GREY" height="111.0" stroke="GREY" strokeType="INSIDE" style="-fx-arc-width: 0;" width="32.0" />
+      <ImageView fx:id="imageIcon" fitHeight="65.0" fitWidth="62.0" layoutX="63.0" layoutY="23.0" pickOnBounds="true" />
+      <Label fx:id="lblTitle" layoutX="157.0" layoutY="25.0" text="Title:" wrapText="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMessage" layoutX="157.0" layoutY="67.0" text="Message:" wrapText="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblClose" layoutX="429.0" layoutY="13.0" text="x">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>
