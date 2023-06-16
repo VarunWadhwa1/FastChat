@@ -1,6 +1,8 @@
 # FastChat
 
 This application uses client server to connect and chat to the server using Java FX.
+
+
 Important -> Add the path To Java FX in your project, 
 (--module-path ${PATH_TO_FX} --add-modules javafx.fxml,javafx.controls,javafx.graphics,javafx.media)
 
